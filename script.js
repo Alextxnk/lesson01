@@ -1,4 +1,4 @@
-alert('Hello world!'); //выводится модальное окно с сообщением
+alert('Hello world!'); 
 console.log('Hello friends!');
 
 const money = 1000;
