@@ -1,9 +1,16 @@
-alert('Hello world!'); 
-console.log('Hello friends!');
-
-const money;
-const income;
-const addExpenses;
-const deposit;
-const mission;
-const period;
+let money = 100000;
+console.log(typeof money);
+let  income = '15000';
+console.log(typeof income);
+let  addExpenses = 'iTunes, Apple Music, Food, Gym, Taxi';
+console.log(addExpenses.length);
+let deposit = true;
+ console.log(typeof deposit);
+let mission = 500000;
+let period = 12;
+console.log('Период равен '  + period + ' месяцев ' + 'Цель заработать ' + mission + ' рублей');
+console.log(addExpenses.toLowerCase());
+console.log(addExpenses.split(', '));
+n = money / 30;
+let budgetDay = n;
+console.log('budgetDay =', n);
