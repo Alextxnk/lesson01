@@ -31,7 +31,7 @@ console.log('Цель будет достигнута за ' + Math.ceil (purpos
 const budgetDay = budgetMonth / 30;
 console.log('Бюджет на день =', Math.floor (budgetDay));
 
-if (budgetDay >= 1200) {
+if (1200 <= budgetDay) {
     console.log('У вас высокий уровень дохода');
 } else if (600 <= budgetDay && budgetDay <= 1200) {
     console.log('У вас средний уровень дохода');
