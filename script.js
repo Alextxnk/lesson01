@@ -20,7 +20,7 @@ console.log('Бюджет на месяц =', budgetMonth);
 const purpose = mission / budgetMonth;
 console.log('Цель будет достигнута за ' + Math.ceil (purpose)  + ' месяцев');
 const budgetDay = budgetMonth / 30;
-console.log('Бюджет на день =',  (budgetDay));
+console.log('Бюджет на день =', Math.floor (budgetDay));
 if (budgetDay >= 1200) {
     console.log('У вас высокий уровень дохода');
 } else if (600 <= budgetDay >= 1200) {
