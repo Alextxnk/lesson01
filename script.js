@@ -2,7 +2,7 @@
 const money = prompt('Ваш месячный доход?', 150000);
 console.log(typeof money);
 
-const  income = '15000';
+const  income = 'Фриланс';
 console.log(typeof income);
 
 const  addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
