@@ -23,16 +23,23 @@ const expenses2 = prompt('Введите обязательную статью �
 const amount2 = +prompt('Во сколько это обойдется?', 20000);
 
 const getExpensesMonth = function (){
-    return money - (amount1 + amount2);
+    return amount1 + amount2;
 };
 
 const budgetMonth = getExpensesMonth();
-console.log('Бюджет на месяц =', budgetMonth);
+console.log('Сумма всех обязательных расходов за месяц =', budgetMonth);
 
-const purpose = mission / budgetMonth;
+const getAccumulatedMonth = function (){
+    return money - budgetMonth;
+};
+
+const accumulatedMonth = getAccumulatedMonth();
+console.log('Бюджет на месяц =', accumulatedMonth);
+
+const purpose = mission / accumulatedMonth;
 console.log('Цель будет достигнута за ' + Math.ceil (purpose)  + ' месяцев');
 
-const budgetDay = budgetMonth / 30;
+const budgetDay = accumulatedMonth / 30;
 console.log('Бюджет на день =', Math.floor (budgetDay));
 
 if (1200 < budgetDay) {
