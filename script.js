@@ -20,7 +20,13 @@ showTypeof(income);
 showTypeof(deposit);
 
 console.log('Период равен '  + period + ' месяцев ' + 'Цель заработать ' + mission + ' рублей');
-console.log(addExpenses.toLowerCase().split(', '));
+
+const getAddExpenses = function(){
+    return addExpenses.toLowerCase().split(', ');
+};
+
+const adddExpenses = getAddExpenses();
+console.log(adddExpenses);
 
 const expenses1 = prompt('Введите обязательную статью расходов?');
 const amount1 = +prompt('Во сколько это обойдется?', 40000);
