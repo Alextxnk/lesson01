@@ -36,10 +36,18 @@ const getAccumulatedMonth = function (){
 const accumulatedMonth = getAccumulatedMonth();
 console.log('Бюджет на месяц =', accumulatedMonth);
 
-const purpose = mission / accumulatedMonth;
+const getTargetMonth = function (){
+    return mission / accumulatedMonth;
+};
+
+const purpose = getTargetMonth();
 console.log('Цель будет достигнута за ' + Math.ceil (purpose)  + ' месяцев');
 
-const budgetDay = accumulatedMonth / 30;
+const getBudgetDay = function (){
+    return accumulatedMonth / 30;
+};
+
+const budgetDay = getBudgetDay();
 console.log('Бюджет на день =', Math.floor (budgetDay));
 
 if (1200 < budgetDay) {
