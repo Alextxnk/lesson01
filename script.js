@@ -1,18 +1,23 @@
 'use strict';
-const money = prompt('Ваш месячный доход?', 150000);
-console.log(typeof money);
+
+const money = +prompt('Ваш месячный доход?', 150000);
 
 const  income = 'Фриланс';
-console.log(typeof income);
 
 const  addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
 console.log(addExpenses.length);
 
 const deposit = confirm('Есть ли у вас депозит в банке?');
-console.log(typeof deposit);
 
 const mission = 500000;
 const period = 6;
+
+const showTypeof = function(data){
+    console.log(data, typeof(data));
+};
+showTypeof(money);
+showTypeof(income);
+showTypeof(deposit);
 
 console.log('Период равен '  + period + ' месяцев ' + 'Цель заработать ' + mission + ' рублей');
 console.log(addExpenses.toLowerCase().split(', '));
