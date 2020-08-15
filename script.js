@@ -50,12 +50,15 @@ const getBudgetDay = function (){
 const budgetDay = getBudgetDay();
 console.log('Бюджет на день =', Math.floor (budgetDay));
 
+const getCondition = function (){
 if (1200 < budgetDay) {
-    console.log('У вас высокий уровень дохода');
+    return ('У вас высокий уровень дохода');
 } else if (600 < budgetDay && budgetDay <= 1200) {
-    console.log('У вас средний уровень дохода');
+    return ('У вас средний уровень дохода');
 } else if (0 <= budgetDay && budgetDay <= 600) {
-    console.log('К сожалению, у вас уровень дохода ниже среднего');
+    return ('К сожалению, у вас уровень дохода ниже среднего');
 } else {
-    console.log('Что-то пошло не так');
+    return ('Что-то пошло не так');
 } 
+};
+console.log(getCondition());
