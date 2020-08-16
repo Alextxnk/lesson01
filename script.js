@@ -37,11 +37,11 @@ const getExpensesMonth = function (){
     return amount1 + amount2;
 };
 
-const budgetMonth = getExpensesMonth();
-console.log('Сумма всех обязательных расходов за месяц =', budgetMonth);
+const expensesMonth = getExpensesMonth();
+console.log('Сумма всех обязательных расходов за месяц =', expensesMonth);
 
 const getAccumulatedMonth = function (){
-    return money - budgetMonth;
+    return money - expensesMonth;
 };
 
 const accumulatedMonth = getAccumulatedMonth();
@@ -61,7 +61,7 @@ const getBudgetDay = function (){
 const budgetDay = getBudgetDay();
 console.log('Бюджет на день =', Math.floor (budgetDay));
 
-const getCondition = function (){
+const getStatusIncome = function (){
 if (1200 < budgetDay) {
     return ('У вас высокий уровень дохода');
 } else if (600 < budgetDay && budgetDay <= 1200) {
@@ -72,4 +72,4 @@ if (1200 < budgetDay) {
     return ('Что-то пошло не так');
 } 
 };
-console.log(getCondition());
+console.log(getStatusIncome());
