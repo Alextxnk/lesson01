@@ -1,13 +1,12 @@
 'use strict';
 
-let isNumber = function(n){
+const isNumber = function(n){
     return !isNaN(parseFloat(n)) && isFinite(n)
 };
 
 let money;
 
-let start = function(){
-    money = prompt('Ваш месячный доход?', 150000);
+const start = function(){
     do{
         money = prompt('Ваш месячный доход?', 150000);
     }
@@ -43,10 +42,11 @@ console.log(adddExpenses);
 
 let expenses1, expenses2;
 
-let getExpensesMonth = function(){
+const getExpensesMonth = function(){
     let sum = 0;
 
     for (let i = 0; i < 2; i++) {
+        //let 
         if (i === 0) {
             expenses1 = prompt('Введите обязательную статью расходов?', "Продукты");
         } else if (i === 1) {
@@ -61,7 +61,7 @@ let getExpensesMonth = function(){
     return sum;
 };
 
-let expensesAmount = getExpensesMonth();
+const expensesAmount = getExpensesMonth();
 console.log('Сумма всех обязательных расходов за месяц= ' + expensesAmount);
 
 const getAccumulatedMonth = function (){
