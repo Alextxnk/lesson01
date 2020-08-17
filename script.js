@@ -24,8 +24,6 @@ const deposit = confirm('Есть ли у вас депозит в банке?')
 const mission = 500000;
 const period = 6;
 
-
-
 const showTypeof = function(item){
     console.log(typeof item);
 };
