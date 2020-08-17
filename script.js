@@ -1,10 +1,18 @@
 'use strict';
 
-const isNumber = function(n){
+let isNumber = function(n){
     return !isNaN(parseFloat(n)) && isFinite(n)
 };
+let money;
 
-const money = +prompt('Ваш месячный доход?', 150000);
+let start = function(){
+    money = prompt('Ваш месячный доход?', 150000);
+    do{
+        money = prompt('Ваш месячный доход?', 150000);
+    }
+    while (!isNumber(money))
+};
+start();
 
 const  income = 'Фриланс';
 
@@ -16,13 +24,7 @@ const deposit = confirm('Есть ли у вас депозит в банке?')
 const mission = 500000;
 const period = 6;
 
-const start = function(){
-    money = prompt('Ваш месячный доход?', 150000);
-    do{
-        money = prompt('Ваш месячный доход?', 150000);
-    }
-    while (!isNumber(money))
-};
+
 
 const showTypeof = function(item){
     console.log(typeof item);
@@ -51,8 +53,10 @@ let getExpensesMonth = function(){
         } else if (i === 1) {
             expenses2 = prompt('Введите обязательную статью расходов?', "Квартплата");
         }
-
+        do{
         sum += +prompt('Во сколько это обойдется?', 30000);
+        }
+        while (!isNumber(sum))
     }
     console.log(sum);
     return sum;
@@ -60,18 +64,6 @@ let getExpensesMonth = function(){
 
 let expensesAmount = getExpensesMonth();
 console.log('Сумма всех обязательных расходов за месяц= ' + expensesAmount);
-
-/*const expenses1 = prompt('Введите обязательную статью расходов?');
-const amount1 = +prompt('Во сколько это обойдется?', 40000);
-const expenses2 = prompt('Введите обязательную статью расходов?');
-const amount2 = +prompt('Во сколько это обойдется?', 20000);*/
-
-/*const getExpensesMonth = function (){
-    return amount1 + amount2;
-};
-
-const expensesMonth = getExpensesMonth();
-console.log('Сумма всех обязательных расходов за месяц =', expensesMonth);*/
 
 const getAccumulatedMonth = function (){
     return money - expensesAmount;
