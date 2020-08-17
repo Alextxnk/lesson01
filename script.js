@@ -3,6 +3,7 @@
 let isNumber = function(n){
     return !isNaN(parseFloat(n)) && isFinite(n)
 };
+
 let money;
 
 let start = function(){
@@ -77,9 +78,9 @@ const getTargetMonth = function (){
 const targetMonth = getTargetMonth();
 
 if (targetMonth < 0) {
-    console.log('Цель не будет достигнута'):
+    console.log('Цель не будет достигнута');
 } else if (0 < targetMonth) {
-    console.log('Цель будет достигнута за ' + Math.ceil (targetMonth)  + ' месяцев'):
+    console.log('Цель будет достигнута за ' + Math.ceil (targetMonth)  + ' месяцев');
 }
 
 const getBudgetDay = function (){
