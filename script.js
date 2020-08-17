@@ -72,12 +72,23 @@ const getAccumulatedMonth = function (){
 const accumulatedMonth = getAccumulatedMonth();
 console.log('Бюджет на месяц =', accumulatedMonth);
 
+
+
+
 const getTargetMonth = function (){
-    return mission / accumulatedMonth;
+    return mission / accumulatedMonth; 
 };
 
-const purpose = getTargetMonth();
-console.log('Цель будет достигнута за ' + Math.ceil (purpose)  + ' месяцев');
+const targetMonth = getTargetMonth();
+
+const purpose = targetMonth;
+if (purpose < 0) {
+    console.log('Цель не будет достигнута')
+} else if (0 < purpose) {
+    console.log('Цель будет достигнута за ' + Math.ceil (purpose)  + ' месяцев')
+}
+
+//console.log(getTargetMonth());
 
 const getBudgetDay = function (){
     return accumulatedMonth / 30;
