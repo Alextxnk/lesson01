@@ -46,7 +46,7 @@ const getExpensesMonth = function(){
     let sum = 0;
     let amount = 0;
     for (let i = 0; i < 2; i++) {
-        //let amount; 
+        
         if (i === 0) {
             expenses1 = prompt('Введите обязательную статью расходов?', "Продукты");
         } else if (i === 1) {
