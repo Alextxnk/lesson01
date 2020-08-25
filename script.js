@@ -34,7 +34,7 @@ console.log(addExpenses.length);
 const showTypeof = function(item){
     console.log(typeof item);
 };
-showTypeof(appData.money);
+showTypeof(money);
 showTypeof(appData.income);
 showTypeof(appData.deposit);
 
@@ -73,7 +73,7 @@ const accumulatedMonth = getAccumulatedMonth();
 console.log('Бюджет на месяц =', accumulatedMonth);
 
 const getTargetMonth = function (){
-    return mission / accumulatedMonth; 
+    return appData.mission / accumulatedMonth; 
 };
 
 const targetMonth = getTargetMonth();
