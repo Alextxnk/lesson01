@@ -14,6 +14,19 @@ const start = function(){
 };
 start();
 
+let appData = {
+    income: {},
+    addIncome: [],
+    expenses: {},
+    addExpenses: [],
+    deposit: false,
+    mission: 500000,
+    period: 6,
+    asking: function(){
+        
+    }
+}
+
 const  income = 'Фриланс';
 
 const  addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
