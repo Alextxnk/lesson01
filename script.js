@@ -35,6 +35,7 @@ let appData = {
     expensesMonth: 0,
     accumulatedMonth: 0
 };
+appData.asking();
 
 console.log(appData.addExpenses.length);
 
