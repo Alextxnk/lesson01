@@ -34,7 +34,7 @@ let appData = {
                 while (!isNumber(sum))
                 amount += sum;
         } 
-        console.log() 
+        console.log(); 
     },
     budget: {
         money: 0
