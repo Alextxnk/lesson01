@@ -23,35 +23,22 @@ let appData = {
     mission: 500000,
     period: 6,
     asking: function(){
-        
+    let appData.addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
+        appData.addExpenses = addExpenses.toLowerCase().split(', ');
+        appData.deposit = confirm('Есть ли у вас депозит в банке?');   
     }
 }
 
-const  income = 'Фриланс';
-
-const  addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
 console.log(addExpenses.length);
-
-const deposit = confirm('Есть ли у вас депозит в банке?');
-
-const mission = 500000;
-const period = 6;
 
 const showTypeof = function(item){
     console.log(typeof item);
 };
-showTypeof(money);
-showTypeof(income);
-showTypeof(deposit);
+showTypeof(appData.money);
+showTypeof(appData.income);
+showTypeof(appData.deposit);
 
 console.log('Период равен '  + period + ' месяцев ' + 'Цель заработать ' + mission + ' рублей');
-
-const getAddExpenses = function(){
-    return addExpenses.toLowerCase().split(', ');
-};
-
-const adddExpenses = getAddExpenses();
-console.log(adddExpenses);
 
 let expenses1, expenses2;
 
