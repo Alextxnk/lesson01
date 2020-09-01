@@ -33,7 +33,7 @@ let appData = {
                 sum = +prompt('Во сколько это обойдется?', 30000);
                 }
                 while (!isNumber(sum))
-                appData.expenses[amount] = number(sum);
+                appData.expenses[amount] = Number(sum);
         } 
         console.log(); 
     },
