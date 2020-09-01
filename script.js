@@ -22,18 +22,18 @@ let appData = {
     deposit: false,
     mission: 500000,
     period: 6,
-    sum: 0,
     asking: function(){
     let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
         appData.addExpenses = addExpenses.toLowerCase().split(', ');
         appData.deposit = confirm('Есть ли у вас депозит в банке?');
+        let amount, sum;
         for (let i = 0; i < 2; i++) {
-            addExpenses[i] = prompt('Введите обязательную статью расходов?', "Продукты");
+            amount = prompt('Введите обязательную статью расходов?', "Продукты");
             do{
-                appData.sum = +prompt('Во сколько это обойдется?', 30000);
+                sum = +prompt('Во сколько это обойдется?', 30000);
                 }
-                while (!isNumber(appData.sum))
-                amount += appData.sum;
+                while (!isNumber(sum))
+                appData.expenses[amount] = number(sum);
         } 
         console.log(); 
     },
