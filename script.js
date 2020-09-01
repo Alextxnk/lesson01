@@ -22,6 +22,7 @@ let appData = {
     deposit: false,
     mission: 500000,
     period: 6,
+    sum: 0,
     asking: function(){
     let addExpenses = prompt('Перечислите возможные расходы за рассчитываемый период через запятую');
         appData.addExpenses = addExpenses.toLowerCase().split(', ');
@@ -29,16 +30,14 @@ let appData = {
         for (let i = 0; i < 2; i++) {
             addExpenses[i] = prompt('Введите обязательную статью расходов?', "Продукты");
             do{
-                sum = +prompt('Во сколько это обойдется?', 30000);
+                appData.sum = +prompt('Во сколько это обойдется?', 30000);
                 }
-                while (!isNumber(sum))
-                amount += sum;
+                while (!isNumber(appData.sum))
+                amount += appData.sum;
         } 
         console.log(); 
     },
-    budget: {
-        money: 0
-    },
+    budget: money,
     budgetDay: 0,
     budgetMonth: 0,
     expensesMonth: 0,
