@@ -51,9 +51,9 @@ console.log(appData.addExpenses.length);
 
 console.log('Период равен '  + appData.period + ' месяцев ' + 'Цель заработать ' + appData.mission + ' рублей');
 
-let expenses1, expenses2;
+//let expenses1, expenses2;
 
-appData.getExpensesMonth = function(){
+/*appData.getExpensesMonth = function(){
     let sum = 0;
     let amount = 0;
     for (let i = 0; i < 2; i++) {
@@ -75,7 +75,7 @@ appData.getExpensesMonth = function(){
 
 appData.expensesMonth = appData.getExpensesMonth();
 console.log('Сумма всех обязательных расходов за месяц= ' + appData.expensesMonth);
-
+*/
 appData.getAccumulatedMonth = function (){
     return money - appData.expensesMonth;
 };
